@@ -1,0 +1,13 @@
+artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.33.3-425f3f7-202503121106
+kubernetes:
+  volumes:
+  - id: oes-cacerts
+    type: secret
+    mountPath: /etc/pki/ca-trust/extracted/java
+  podAnnotations:
+    moniker.spinnaker.io/application: spin
+
+env: 
+  JAVA_OPTS: "-XX:MaxRAMPercentage=100.0"
+ #We need to uncomment the following env variable if we are installing in OpenShift cluster
+ # HOME: "/tmp"
