@@ -306,16 +306,14 @@ deploymentConfigurations:
       enabled: false
       accounts: []
     github:
-      enabled: true
-      accounts: 
-      - name: opsmxdemo_account
+      enabled: false
+      accounts: []
     gitlab:
       enabled: false
       accounts: []
     gitrepo:
-      enabled: true 
-      accounts: 
-      - name: opsmx_repo
+      enabled: false 
+      accounts: []
     http:
       enabled: false
       accounts: []
