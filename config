@@ -113,7 +113,7 @@ deploymentConfigurations:
       enabled: false
     vault:
       enabled: false
-    location: SPINNAKER_NAMESPACE
+    location: "SPINNAKER_NAMESPACE"
     customSizing:
       front50:
         requests:
@@ -173,8 +173,8 @@ deploymentConfigurations:
           cpu: "500m"
       monitoring-daemon:
         requests:
-          memory: 70Mi
-          cpu: 100m
+          memory: "70Mi"
+          cpu: "100m"
     sidecars: {}
     initContainers: {}
     hostAliases: {}
@@ -260,11 +260,11 @@ deploymentConfigurations:
     apiSecurity:
       ssl:
         enabled: false
-      overrideBaseUrl: /gate/
+      overrideBaseUrl: "/gate/"
     uiSecurity:
       ssl:
         enabled: false
-      overrideBaseUrl: PROTOCOL://OVERRIDE_DECK_URL
+      overrideBaseUrl: "PROTOCOL://OVERRIDE_DECK_URL"
     authn:
       oauth2:
         enabled: false
@@ -312,15 +312,17 @@ deploymentConfigurations:
       enabled: false
       accounts: []
     gitrepo:
-      enabled: false 
+      enabled: false
       accounts: []
     http:
       enabled: false
       accounts: []
     helm:
-      enabled: true 
-      accounts: 
+      enabled: true
+      accounts:
       - name: "opsmx-oes-helm-repo"
+        repository: "https://helmcharts.opsmx.com"
+      - name: "helmtest"
         repository: "https://helmcharts.opsmx.com"
     s3:
       enabled: false
